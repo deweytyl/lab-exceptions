@@ -8,5 +8,9 @@ package taojava.labs.exceptions;
  */
 public class MathUtils
 {
-
+  public static double
+  smallQuadraticRoot (double a, double b, double c)
+  {
+    return ((-b - java.lang.Math.sqrt (b * b - 4 * a * c)) / (2 * a)); 
+  }
 } // MathUtils
