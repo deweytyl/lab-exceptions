@@ -15,45 +15,46 @@ public class IOUtils
   /**
    * Prompt for and read an integer.
    */
-  public static int readInt(PrintWriter pw, BufferedReader br, String prompt)
-    //throws Exception
+  public static int
+    readInt (PrintWriter pw, BufferedReader br, String prompt)
+  // throws Exception
   {
-    if (!prompt.equals(""))
+    if (!prompt.equals (""))
       {
-        pw.print(prompt);
-        pw.flush();
+        pw.print (prompt);
+        pw.flush ();
       } // if there is a prompt
     String response;
     try
       {
-        response = br.readLine();
-        return Integer.parseInt(response);
+        response = br.readLine ();
+        return Integer.parseInt (response);
       } // try to read and parse a string
     catch (Exception e)
       {
         return 0;
       } // Reading/parsing fails
-    
+
   } // readInt
-  
-  public static double readDouble(PrintWriter pw, BufferedReader br, String prompt)
-  //throws Exception
-{
-  if (!prompt.equals(""))
-    {
-      pw.print(prompt);
-      pw.flush();
-    } // if there is a prompt
-  String response;
-  try
-    {
-      response = br.readLine();
-      return Double.parseDouble(response);
-    } // try to read and parse a string
-  catch (Exception e)
-    {
-      return 0;
-    } // Reading/parsing fails
-  
-} // readInt
+
+  public static double
+    readDouble (PrintWriter pw, BufferedReader br, String prompt)
+  {
+    if (!prompt.equals (""))
+      {
+        pw.print (prompt);
+        pw.flush ();
+      } // if there is a prompt
+    String response;
+    try
+      {
+        response = br.readLine ();
+        return Double.parseDouble (response);
+      } // try to read and parse a string
+    catch (Exception e)
+      {
+        return 0;
+      } // Reading/parsing fails
+
+  } // readDouble
 } // class IOUtils
